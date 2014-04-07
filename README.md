@@ -4,7 +4,7 @@ Skeleton project directories for various project types.
 
 - [coffeescript-scss-jquery](coffeescript-scss-jquery): skeleton project dir for a skeleton coffeescript + jquery project. Includes jquery and a very basic Makefile for compiling the coffescript and the scss
 
-- [python-commandline-util](python-commandline-util): skeleton project dir for a python command-line utility  
+- [python-commandline-simple](python-commandline-simple): skeleton project dir for a simple Python command-line utility that does not use setuptools and doesn't use automated testing
 
 
 ## License
