@@ -9,4 +9,4 @@ Skeleton project directories for various project types.
 
 ## License
 
-This repository includes [jQuery, which has its own license](https://jquery.org/license/). Other parts of the project are licensed according to the terms in the file LICENSE.txt (a BSD-style license).
+This repository includes [jQuery, which has its own license](https://jquery.org/license/). Other parts of the project are licensed according to the terms in the file [LICENSE.txt](LICENSE.txt) (a BSD-style license).
