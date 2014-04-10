@@ -19,6 +19,7 @@ def main():
         "{{Description of input files}}"))
     argp.add_argument('-d', '--debug', action="store_true", help=(
         "enable debugging output"))
+    args = argp.parse_args()
 
     # do things
 
