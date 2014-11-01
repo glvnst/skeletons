@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-{{Program Name}}: {{Program description}}
+{{Program name}}: {{Program description}}
 """
 import argparse
 import sys
@@ -27,6 +27,5 @@ def main():
 
 
 if __name__ == '__main__':
-    EXIT_STATUS = main()
-    sys.exit(int(not EXIT_STATUS if isinstance(EXIT_STATUS, bool)
-                 else EXIT_STATUS))
+    RESULT = main()
+    sys.exit(int(not RESULT if isinstance(RESULT, bool) else RESULT))
