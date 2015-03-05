@@ -4,17 +4,18 @@
 """
 import argparse
 import sys
-
-#import support_modules
+import datetime
 
 
 def main():
     """
-    primary function for command-line execution. return an exit status integer
-    or a bool type (where True indicates successful exection)
+    direct program entry point
+    return an exit status integer suitable for use with sys.exit
     """
-    argp = argparse.ArgumentParser(description=(
-        "{{Program description}}"))
+    argp = argparse.ArgumentParser(
+        description=(
+            "{{Program description}}"),
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     argp.add_argument('inputfiles', nargs="+", help=(
         "{{Description of input files}}"))
     argp.add_argument('-d', '--debug', action="store_true", help=(
@@ -23,9 +24,22 @@ def main():
 
     # do things
 
-    return True
+    return 0
+
+
+def warn(message):
+    """
+    Print the given message to stderr, with timestamp prepended and newline
+    appended, return the message unchanged
+    """
+    sys.stderr.write("{} {}\n".format(datetime.datetime.now(), message))
+    return message
 
 
 if __name__ == '__main__':
-    RESULT = main()
-    sys.exit(int(not RESULT if isinstance(RESULT, bool) else RESULT))
+    try:
+        RESULT = main()
+    except KeyboardInterrupt:
+        sys.stderr.write("\n")
+        RESULT = 1
+    sys.exit(RESULT)
